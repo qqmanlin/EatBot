@@ -10,7 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
-ngrok_url = 'd7b2-140-118-122-233.ngrok.io'
+"""
+python manage.py runserver
+"""
+
+ngrok_url = '5e21-140-118-122-233.ngrok.io'
 
 from pathlib import Path
 

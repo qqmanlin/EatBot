@@ -1,0 +1,83 @@
+{
+  "type": "bubble",
+  "size": "mega",
+  "direction": "ltr",
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "無調味壽司片",
+        "weight": "bold",
+        "size": "xl"
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "margin": "lg",
+        "spacing": "sm",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "baseline",
+            "spacing": "sm",
+            "contents": [
+              {
+                "type": "text",
+                "text": "Price",
+                "color": "#aaaaaa",
+                "size": "md",
+                "flex": 1
+              },
+              {
+                "type": "text",
+                "wrap": true,
+                "color": "#666666",
+                "size": "md",
+                "flex": 5,
+                "text": "30 元 / 4 片"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "type": "box",
+    "layout": "vertical",
+    "spacing": "sm",
+    "contents": [
+      {
+        "type": "button",
+        "style": "primary",
+        "height": "sm",
+        "action": {
+          "type": "message",
+          "label": "加入購物車",
+          "text": "hello"
+        },
+        "position": "relative",
+        "margin": "none",
+        "gravity": "top"
+      },
+      {
+        "type": "button",
+        "style": "secondary",
+        "height": "sm",
+        "action": {
+          "type": "message",
+          "label": "從購物車中移除",
+          "text": "hello"
+        }
+      }
+    ],
+    "flex": 0
+  },
+  "action": {
+    "type": "message",
+    "label": "action",
+    "text": "hello"
+  }
+}

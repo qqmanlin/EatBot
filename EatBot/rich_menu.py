@@ -18,19 +18,19 @@ headers = {"Authorization":"Bearer odxu5LlWs+3Y2zWjVGboTsvjRZ6i9raKjs5YQXrYZRnSN
 #     "areas":[
 #         {
 #           "bounds": {"x": 61, "y": 51, "width": 1148, "height": 747},
-#           "action": {"type": "message", "text": "身體資訊"}
+#           "action": {"type": "message", "text": "找生鮮"}
 #         },
 #         {
 #           "bounds": {"x": 1281, "y": 51, "width": 1148, "height": 747},
-#           "action": {"type": "message", "text": "營養素"}
+#           "action": {"type": "message", "text": "找私廚"}
 #         },
 #         {
 #           "bounds": {"x": 61, "y": 868, "width": 1148, "height": 747},
-#           "action": {"type": "message", "text": "吃"}
+#           "action": {"type": "message", "text": "找食譜"}
 #         },
 #         {
 #           "bounds": {"x": 1281, "y": 868, "width": 1148, "height": 747},
-#           "action": {"type": "message", "text": "運動gogo"}
+#           "action": {"type": "message", "text": "每日驚喜"}
 #         }
 #     ]
 #   }
@@ -39,7 +39,7 @@ headers = {"Authorization":"Bearer odxu5LlWs+3Y2zWjVGboTsvjRZ6i9raKjs5YQXrYZRnSN
 #                        headers=headers,data=json.dumps(body).encode('utf-8'))
 #
 # print(req.text) # 複製 request id
-# {"richMenuId":"richmenu-4830316c1e258dbabd3338f8264f378c"}
+# {"richMenuId":"richmenu-2d0096c50bc07759277fc29aa3147068"}
 
 # Step 1 執行至以上內容
 # ===================
@@ -51,9 +51,9 @@ from linebot import (
 )
 # # =======================================================
 line_bot_api = LineBotApi(token)
-rich_menu_id = 'richmenu-4830316c1e258dbabd3338f8264f378c'
+rich_menu_id = 'richmenu-2d0096c50bc07759277fc29aa3147068'
 # # =======================================================
-path = r'F:\AI\Line_Chatbot\menu.png'
+path = 'menu.png'
 
 with open(path, 'rb') as f:
     line_bot_api.set_rich_menu_image(rich_menu_id, "image/png", f)
@@ -61,6 +61,8 @@ with open(path, 'rb') as f:
 req = requests.request('POST', 'https://api.line.me/v2/bot/user/all/richmenu/'+rich_menu_id,
                        headers=headers)
 print(req.text)
+
+
 #
 # rich_menu_list = line_bot_api.get_rich_menu_list()
 #
